@@ -1,0 +1,27 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Address {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		
+		Scanner file = new Scanner(new File("address.txt"));
+		ArrayList<String> words = new ArrayList<String>();
+		
+		String longWord = "";
+		int numWords = 0;
+		double avelength = 0;
+		while(file.hasNext()) 
+		{
+			String currentWord = file.next();
+			words.add(currentWord);
+			if(currentWord.length() > longWord.length())
+			{
+				longWord = currentWord;
+			}
+		}
+		System.out.println(longWord);
+	}
+}
