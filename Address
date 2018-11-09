@@ -11,8 +11,9 @@ public class Address {
 		ArrayList<String> words = new ArrayList<String>();
 		
 		String longWord = "";
-		int numWords = 0;
-		double avelength = 0;
+		double numWords = 0;
+		double aveLength = 0;
+		double totalLength = 0;
 		while(file.hasNext()) 
 		{
 			String currentWord = file.next();
@@ -21,7 +22,11 @@ public class Address {
 			{
 				longWord = currentWord;
 			}
+			totalLength = totalLength + currentWord.length();
+			numWords++;
 		}
 		System.out.println(longWord);
+		aveLength = totalLength/numWords;
+		System.out.println(aveLength);
 	}
 }
