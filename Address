@@ -25,8 +25,8 @@ public class Address {
 			totalLength = totalLength + currentWord.length();
 			numWords++;
 		}
-		System.out.println(longWord);
+		System.out.println("The longest word is: " + longWord);
 		aveLength = totalLength/numWords;
-		System.out.println(aveLength);
+		System.out.println("The average length is: " + aveLength);
+		System.out.println("The total number of words is: " + numWords);
 	}
-}
